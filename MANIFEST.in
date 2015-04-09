@@ -4,4 +4,3 @@ include README.rst
 include DESCRIPTION.rst
 include CHANGES.txt
 recursive-include quickadmin *py 
-recursive-include data * 
