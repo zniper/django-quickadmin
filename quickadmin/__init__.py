@@ -1,4 +1,3 @@
+from .register import register_models
 
-def main():
-    """Entry point for the application script"""
-    print("Call your main application code here")
+register_models()
