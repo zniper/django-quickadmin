@@ -11,9 +11,6 @@ from .config import QADMIN_DEFAULT_EXCLUDES, USE_APPCONFIG
 
 logger = getLogger(__name__)
 
-# This have to be run first, to init the url set
-project_urls = import_module(settings.ROOT_URLCONF)
-
 EXCL_MODELS = len('.models')
 
 
@@ -46,6 +43,7 @@ def update_admin_urls():
     # Delete the old admin URLs
     old_pattern = None
     admin_regex = r'^admin/'
+    project_urls = import_module(settings.ROOT_URLCONF)
     for url_item in project_urls.urlpatterns:
         if url_item.app_name == 'admin':
             old_pattern = url_item
