@@ -1,1 +1,1 @@
-v0.1.0, 2015-04-.. -- Initial release.
+v0.1.0, 2015-04-10 -- Initial release.

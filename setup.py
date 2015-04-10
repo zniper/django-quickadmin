@@ -9,9 +9,9 @@ with open(path.join(here, 'DESCRIPTION.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='quickadmin',
+    name='django-quickadmin',
     version='0.1.0',
-    description='Django application support quick adding models management into admin area',
+    description='Django application automatically registers all found models into admin area',
     long_description=long_description,
     url='https://github.com/zniper/django-quickadmin',
     author='Ha Pham',
