@@ -25,7 +25,7 @@ Locate `INSTALLED_APPS` inside settings file, and put `'django-quickadmin'` ther
         'django.contrib.messages',
         'django.contrib.staticfiles',
         ...
-        'django-quickadmin',
+        'quickadmin',
         ...
     )
 
