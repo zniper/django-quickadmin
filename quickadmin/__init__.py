@@ -1,3 +1,7 @@
-from .register import register_models
+from .config import USE_APPCONFIG
 
-register_models()
+if USE_APPCONFIG:
+    default_app_config = 'quickadmin.apps.QAdminAppConfig'
+else:
+    from .register import register_models
+    register_models()
