@@ -15,7 +15,7 @@ The installation process is simple just like most of Django applications, just u
 
     pip install django-quickadmin
   
-Locate `INSTALLED_APPS` inside settings file, and put `'django-quickadmin'` there:
+Locate `INSTALLED_APPS` inside settings file, and put `'quickadmin'` there:
 
     INSTALLED_APPS = (
         'django.contrib.admin',
