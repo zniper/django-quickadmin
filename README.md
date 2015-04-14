@@ -15,19 +15,16 @@ The installation process is simple just like most of Django applications, just u
 
     pip install django-quickadmin
   
-Locate `INSTALLED_APPS` inside settings file, and put `'quickadmin'` there:
+Locate `INSTALLED_APPS` inside settings file, and put `'quickadmin'` there. 
 
     INSTALLED_APPS = (
         'django.contrib.admin',
-        'django.contrib.auth',
-        'django.contrib.contenttypes',
-        'django.contrib.sessions',
-        'django.contrib.messages',
-        'django.contrib.staticfiles',
         ...
         'quickadmin',
         ...
     )
+
+Please be sure that `'django.contrib.admin'` is present, otherwise Django will throw error at starting
 
 There you are, just restart the Django instance and visit admin page to see all custom models appeared and ready to be managed.
 

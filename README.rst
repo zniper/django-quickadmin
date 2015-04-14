@@ -14,5 +14,22 @@ Features
 * Configurable exclusion of specific applications and models
 * Auto exclude models from stock applications of Django
 
+Installation
+============
+
+To install the latest release, just using pip::
+
+    pip install django-quickadmin
+
+Then insert 'quickadmin' into INSTALLED_APPS inside settings module::
+
+    INSTALLED_APPS = (
+        'django.contrib.admin',
+        ...
+        'quickadmin',
+        ...
+        )
+
+Please be sure that `'django.contrib.admin'` is present, otherwise Django will throw error at starting
 
 For any questions or comments regarding this application, please email to me[at]zniper.net.
