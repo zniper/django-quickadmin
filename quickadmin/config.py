@@ -5,6 +5,7 @@ from django import get_version
 
 QADMIN_DEFAULT_EXCLUDES = [
     'django.contrib.sessions',
+    'django.contrib.auth',
     'django.contrib.admin',
     'django.contrib.contenttypes',
     'django.contrib.messages',
