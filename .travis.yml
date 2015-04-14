@@ -19,6 +19,6 @@ install:
   - pip install -e .
 script:
   - flake8 quickadmin --exclude=*/migrations/*,*test*
-  - coverage run --source='./' --omit=*/migrations/*,*test* run_tests.py
+  - coverage run --source='./' --omit=*/migrations/*,*test*,setup.* run_tests.py
 after_script:
   - coveralls

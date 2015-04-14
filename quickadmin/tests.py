@@ -50,5 +50,4 @@ class UpdateURLTestCase(TestCase):
         urls = import_module(settings.ROOT_URLCONF)
         org_len = len(urls.urlpatterns)
         register.update_admin_urls()
-        reload(urls)
         self.assertEqual(org_len, len(urls.urlpatterns))
