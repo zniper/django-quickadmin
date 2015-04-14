@@ -25,7 +25,7 @@ setup(
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
     ],
-    keywords='django admin models register customize list python',
+    keywords='django admin models register python',
     packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
     install_requires=[''],
     extras_require={
