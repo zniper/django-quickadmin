@@ -45,11 +45,16 @@ def update_admin_urls():
     admin_regex = r'^admin/'
     project_urls = import_module(settings.ROOT_URLCONF)
     for url_item in project_urls.urlpatterns:
-        if url_item.app_name == 'admin':
-            old_pattern = url_item
-            admin_regex = url_item.regex.pattern
-            project_urls.urlpatterns.remove(url_item)
-            break
+        try:
+            if url_item.app_name == 'admin':
+                old_pattern = url_item
+                admin_regex = url_item.regex.pattern
+                project_urls.urlpatterns.remove(url_item)
+                break
+        except AttributeError:
+            # Bypass the non-admin URLconf
+            logger.error('Error when finding and removing old admin URLconf.')
+
     # Reload updated admin URLs
     try:
         admin.autodiscover()
@@ -57,7 +62,7 @@ def update_admin_urls():
             url(admin_regex, include(admin.site.urls))
         )
     except:
-        logger.error('Error when updating new admin urls.')
+        logger.error('Error when updating new admin URLconfs.')
         if old_pattern:
             project_urls.urlpatterns.append(old_pattern)
 
