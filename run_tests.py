@@ -22,8 +22,16 @@ settings.configure(
         "django.contrib.admin",
         "django.contrib.contenttypes",
         "django.contrib.sites",
+        "django.contrib.sessions",
         "quickadmin",
     ],
+    MIDDLEWARE_CLASSES=(
+        'django.contrib.sessions.middleware.SessionMiddleware',
+        'django.middleware.common.CommonMiddleware',
+        'django.middleware.csrf.CsrfViewMiddleware',
+        'django.contrib.auth.middleware.AuthenticationMiddleware',
+        'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+        ),
     SITE_ID=1,
     TEMPLATE_DIRS=[
         os.path.abspath(os.path.join(os.path.dirname(__file__), "quickadmin", "tests", "templates")),

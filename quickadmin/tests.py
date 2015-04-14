@@ -9,7 +9,7 @@ try:
 except ImportError:
     from django.test.utils import override_settings
 
-import register
+from quickadmin import register
 
 
 class FilterModelTestCase(TestCase):
